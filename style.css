@@ -2,9 +2,19 @@
     font-family: NeuePowerTrial-Regular;
     src: url(fonts/NeuePowerTrial-Regular.ttf);
 }
-body {
-    background-color: rgb(153, 204, 225);
+*{
+    /* Disable user select across browser types */
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    color: rgb(210, 214 ,239);
 }
+body {
+    background-color: rgb(16, 69 ,71);
+}
+
 h1 {
     font-family: NeuePowerTrial-Regular, sans-serif;
     font-size: 6em;
@@ -17,13 +27,19 @@ h2 {
     text-align: center;
 }
 
-a {
-    text-decoration: none;
-    color: rgba(0,0,0,0.8);
-    display: block;
+:hover{
+    cursor: default;
+}
+
+h3 {
     text-align: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 a:hover {
-    color: rgba(0, 0, 255, 0.8);
+    color: rgb(175, 146, 157);
+    cursor: pointer;
 }
