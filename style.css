@@ -143,7 +143,7 @@ body {
 #left {
 
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1.2fr 0.8fr 0.2fr;
     width: 30vw;
     min-width: 470px;
 }
@@ -180,6 +180,10 @@ body {
     
 }
 
+a {
+  text-decoration: none;
+}
+
 #right {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -205,6 +209,7 @@ body {
 .resume-text {
     padding-left: 2.2em;
     line-height: 0.5;
+    color: black;
 }
 
 .resume-date {
@@ -217,6 +222,92 @@ body {
     line-height: 1;
 }
 
-a {
-    text-decoration: none;
+#page-title {
+    text-align: center;
+    font-family: NeuePowerTrial-Regular, sans-serif;
+    font-size: 3vw;
+}
+
+#projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: white;
+    width: 20%;
+    margin: 50px;
+    min-width: 500px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    padding-bottom: 15px;
+    display: grid;
+    grid-template-rows: 5fr 1fr 1fr;
+    color: rgb(16,69,71);
+}
+
+.project-pic{
+    -moz-border-radius-topleft: 1vh;
+    -moz-border-radius-topright: 1vh;
+    -webkit-border-top-left-radius: 1vh;
+    -webkit-border-top-right-radius: 1vh;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+}
+
+#mvpic{
+    background: url("assets/AVizPic.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.project-title {
+    text-align: center;
+    font-family: NeuePowerTrial-Regular, sans-serif;
+    font-size: 1em;
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 25px;
+    color: orange;
+}
+
+.link {
+    font-size: 1em;
+    text-align: center;
+    color: rgb(16,69,71);
+}
+
+#chesspic {
+  background: url("assets/chesspic.png");
+  background-size: cover;
+  background-repeat: no-reapeat;
+}
+
+#p5runner {
+  background: url("assets/p5runner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#kandinsky {
+  background: url("assets/kandinsky.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#back-button {
+  margin: 10px;
+  margin-top: 10px;
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  font-family: NeuePowerTrial-Regular, sans-serif;
+  color: white;
 }
