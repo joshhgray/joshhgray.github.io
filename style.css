@@ -2,6 +2,7 @@
     font-family: NeuePowerTrial-Regular;
     src: url(fonts/NeuePowerTrial-Regular.ttf);
 }
+
 *{
     /* Disable user select across browser types */
     user-select: none;
@@ -9,37 +10,213 @@
     -khtml-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    color: rgb(210, 214 ,239);
 }
+
 body {
-    background-color: rgb(16, 69 ,71);
+    background-color: rgb(16,69,71);
+    margin: 0px;
 }
 
-h1 {
+#menu {  
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  #menu-items {
+    margin-left: clamp(4rem, 20vw, 48rem);
+    position: relative;
+    z-index: 2;
+  }
+  
+  #menu[data-active-index="0"] > #menu-background-pattern {
+    background-position: 0% -25%;
+  }
+  
+  #menu[data-active-index="1"] > #menu-background-pattern {
+    background-position: 0% -50%;
+  }
+  
+  #menu[data-active-index="2"] > #menu-background-pattern {
+    background-position: 0% -75%;
+  }
+  
+  #menu[data-active-index="3"] > #menu-background-pattern {
+    background-position: 0% -100%;
+  }
+  
+  #menu[data-active-index="0"] > #menu-background-image {
+    background-position: center 45%;
+  }
+  
+  #menu[data-active-index="1"] > #menu-background-image {
+    background-position: center 50%;
+  }
+  
+  #menu[data-active-index="2"] > #menu-background-image {
+    background-position: center 55%;
+  }
+  
+  #menu[data-active-index="3"] > #menu-background-image {
+    background-position: center 60%;
+  }
+
+  
+  #menu-background-pattern {
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.1) 9%, 
+      transparent 9%
+    );
+    background-position: 0% 0%;
+    background-size: 12vmin 12vmin;
+    height: 100vh;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transition: opacity 800ms ease, 
+      background-size 800ms ease,
+      background-position 800ms ease;
+    width: 100vw;
+    z-index: 1;
+  }
+  
+  #menu-background-image {
+    background-image: url("assets/nypiccrop.jpg");
+    background-position: center 40%;
+    background-size: 110vmax;
+    height: 100%;
+    left: 0px;  
+    opacity: 0.15;
+    position: absolute;
+    top: 0px;
+    transition: opacity 800ms ease,
+      background-size 800ms ease,
+      background-position 800ms ease;
+    width: 100%;
+    z-index: 0;
+  }
+  
+  #menu-items:hover ~ #menu-background-pattern {
+    background-size: 11vmin 11vmin;
+    opacity: 0.5;
+  }
+  
+  #menu-items:hover ~ #menu-background-image {
+    background-size: 100vmax;
+    opacity: 0.1;
+  }
+  
+  #menu-items:hover > .menu-item {
+    opacity: 0.3;
+  }
+  
+  #menu-items:hover > .menu-item:hover {
+    opacity: 1; 
+  }
+.menu-item {
+    color: rgb(175, 146, 157);
+    font-size: clamp(3rem, 8vw, 8rem);
     font-family: NeuePowerTrial-Regular, sans-serif;
-    font-size: 6em;
-    text-align: center;
+    
+    display: block;
+    text-decoration: none;
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    transition: opacity 400ms ease;
 }
 
-h2 {
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    margin: 3rem;
+}
+
+.grid-item {
+    background: white;
+    border-radius: 1vh;
+    font: black;
+    font-size: 1.5em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+#left {
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: 30vw;
+    min-width: 470px;
+}
+
+#top {
+    -moz-border-radius-topleft: 1vh;
+    -moz-border-radius-topright: 1vh;
+    -webkit-border-top-left-radius: 1vh;
+    -webkit-border-top-right-radius: 1vh;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    background-image: url("assets/nypiccropprof.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#bottom {
+    font: black;
+    padding: 1.25em;
+}
+
+#name {
     font-family: NeuePowerTrial-Regular, sans-serif;
-    font-size: 2em;
+    font-size: 3em;
     text-align: center;
+    color: rgb(16,69,71);
 }
 
-:hover{
-    cursor: default;
+
+.details{
+    font-family: NeuePowerTrial-Regular, sans-serif;
+    font-size: 1em;
+    text-align: center;
+    
 }
 
-h3 {
-    text-align: center;
+#right {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1.25em;
+    padding: 1.25em;
+    width: 60vw;
+    height: 85vh;
+    min-width: 500px;
+    font-size: 1.25em;
+    line-height: 0.25;
+}
+
+.resume-header {
+    color: rgb(16,69,71);
+    font-family: NeuePowerTrial-Regular, sans-serif;
+}
+
+.resume-title {
+    padding-left: 1em;
+    line-height: 1;
+}
+
+.resume-text {
+    padding-left: 2.2em;
+    line-height: 0.5;
+}
+
+.resume-date {
+    padding-left: 3em;
+    font-size: 0.66em;
+}
+.resume-subtext {
+    font-size: 1em;
+    padding-left: 2.2em;
+    line-height: 1;
 }
 
 a {
     text-decoration: none;
-}
-
-a:hover {
-    color: rgb(175, 146, 157);
-    cursor: pointer;
 }
