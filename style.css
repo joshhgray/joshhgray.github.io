@@ -258,7 +258,7 @@ a {
 }
 
 #mvpic{
-    background: url("assets/AVizPic.png");
+    background: url("assets/AVizPic.PNG");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -284,19 +284,19 @@ a {
 }
 
 #chesspic {
-  background: url("assets/chesspic.png");
+  background: url("assets/chesspic.PNG");
   background-size: cover;
   background-repeat: no-reapeat;
 }
 
 #p5runner {
-  background: url("assets/p5runner.png");
+  background: url("assets/p5runner.PNG");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 #kandinsky {
-  background: url("assets/kandinsky.png");
+  background: url("assets/kandinsky.PNG");
   background-size: cover;
   background-repeat: no-repeat;
 }
