@@ -125,28 +125,18 @@ body {
     transition: opacity 400ms ease;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 3rem;
-    margin: 3rem;
-}
 
-.grid-item {
+.resume {
     background: white;
     border-radius: 1vh;
     font: black;
     font-size: 1.5em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    margin: 5rem;
+    padding: 30px;
 }
 
-#left {
 
-    display: grid;
-    grid-template-rows: 1.2fr 0.8fr 0.2fr;
-    width: 30vw;
-    min-width: 470px;
-}
 
 #top {
     -moz-border-radius-topleft: 1vh;
@@ -158,39 +148,25 @@ body {
     background-image: url("assets/nypiccropprof.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
-#bottom {
-    font: black;
-    padding: 1.25em;
-}
-
-#name {
-    font-family: NeuePowerTrial-Regular, sans-serif;
-    font-size: 3em;
-    text-align: center;
-    color: rgb(16,69,71);
-}
-
-
-.details{
-    font-family: NeuePowerTrial-Regular, sans-serif;
-    font-size: 1em;
-    text-align: center;
-    
-}
 
 a {
   text-decoration: none;
 }
 
 #right {
+  flex-basis: 55%;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: 1.25em;
     padding: 1.25em;
     width: 60vw;
     height: 85vh;
+    min-height: 1080px;
     min-width: 500px;
     font-size: 1.25em;
     line-height: 0.25;
@@ -226,6 +202,7 @@ a {
     text-align: center;
     font-family: NeuePowerTrial-Regular, sans-serif;
     font-size: 3vw;
+    color: white;
 }
 
 #projects-container {
@@ -299,6 +276,66 @@ a {
   background: url("assets/kandinsky.PNG");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 80px;
+  background: #0077B5;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  margin: 0 20px;
+  transition: all 0.3s ease-in-out;
+  font-family: NeuePowerTrial-Regular, sans-serif;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background: #005F8D;
+  cursor: pointer;
+}
+
+.github {
+  background-image: url("assets/github.svg");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: 30px center;
+}
+
+.linkedin {
+  background-image: url("assets/linkedin.svg");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: 30px center;
+}
+
+.chess {
+  background-image: url("assets/chess.svg");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: 30px center;
+}
+
+@media(max-width: 600px){
+  .center{
+    flex-direction: column;
+  }
+  .btn{
+    margin: 10px 0;
+  }
 }
 
 #back-button {
