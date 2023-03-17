@@ -300,6 +300,7 @@ a {
   margin: 0 20px;
   transition: all 0.3s ease-in-out;
   font-family: NeuePowerTrial-Regular, sans-serif;
+  width: 200px;
 }
 
 .btn:hover {
@@ -329,15 +330,6 @@ a {
   background-position: 30px center;
 }
 
-@media(max-width: 600px){
-  .center{
-    flex-direction: column;
-  }
-  .btn{
-    margin: 10px 0;
-  }
-}
-
 #back-button {
   margin: 10px;
   margin-top: 10px;
@@ -348,3 +340,24 @@ a {
   font-family: NeuePowerTrial-Regular, sans-serif;
   color: white;
 }
+
+
+@media(max-width: 600px){
+  .center{
+    flex-direction: column;
+  }
+  .btn{
+    margin: 10px 0;
+    width: 150px;
+  }
+  .resume{
+    margin: 1rem;
+    padding: 10px;
+    font-size: 15px;
+  }
+  .project-card {
+    min-width: 350px;
+  }
+}
+
+
