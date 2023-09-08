@@ -266,6 +266,12 @@ a {
   background-repeat: no-reapeat;
 }
 
+#asteroidGame {
+  background: url("assets/asteroidGame.PNG");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 #p5runner {
   background: url("assets/p5runner.PNG");
   background-size: cover;
@@ -359,5 +365,3 @@ a {
     min-width: 350px;
   }
 }
-
-
